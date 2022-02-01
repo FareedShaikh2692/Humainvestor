@@ -1,125 +1,147 @@
-<style>
-  span{
-    font-size: 12px;
-  }
-</style>
-<html class="">
-<title>signup</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|PT+Sans|Roboto|Roboto+Slab|Titillium+Web" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./css/sign-up.css" />
+  <link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" />
+  <title>Humainvestor</title>
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
 </head>
-<section class="vh-100" style="background-color: #eee;">
-  <div class="container h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-lg-12 col-xl-11">
-        <div class="card text-black" style="border-radius: 25px;">
-          <div class="card-body p-md-5">
-            <div class="row justify-content-center">
-              <div class="col-md-10 col-lg-6 col-xl-6 order-2 order-lg-1">
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-2">Create An Account</p>
-                <form class="mx-1 mx-md-6" method="post" action="{{url('/postsignup')}}" >
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                  <div class="row">
-                    <div class="d-flex col flex-row align-items-center mb-2">
-                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                      <div class="form-outline flex-fill mb-0">
-                        <input type="text" name="firstname" id="form3Example1c" class="form-control" data-required data-error-message="First Name is required" />
-                        <label class="form-label" for="form3Example1c"> First Name</label><br>
-                        <span class="text-danger ">{{ $errors->first('firstname') }}</span>
-                      </div>
-                    </div>
-                    <div class="d-flex col flex-row align-items-center mb-2">
-                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                      <div class="form-outline flex-fill mb-0">
-                        <input type="text" name="lastname" id="form3Example1c" class="form-control" />
-                        <label class="form-label" for="form3Example1c"> Last Name</label><br>
-                        <span class="text-danger ">{{ $errors->first('lastname') }}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="d-flex col flex-row align-items-center mb-2">
-                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                      <div class="form-outline flex-fill mb-0">
-                        <input type="text" name="nickname" id="form3Example1c" class="form-control" />
-                        <label class="form-label" for="form3Example1c"> Nick Name</label>
-                      </div>
-                    </div>
-                    <div class="d-flex col flex-row align-items-center mb-2">
-                    </div>
-                  </div>
 
-                  <div class="row">
-                    <div class="d-flex col flex-row align-items-center mb-2">
-                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                      <div class="form-outline flex-fill mb-0">
-                        <input type="email" name="email" id="form3Example1c" class="form-control" />
-                        <label class="form-label" for="form3Example1c"> Email</label><br>
-                        <span class="text-danger ">{{ $errors->first('email') }}</span>
-                      </div>
-                    </div>
-                    <div class="d-flex col flex-row align-items-center mb-2">
-                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                      <div class="form-outline flex-fill mb-0">
-                        <input type="email" name="conemail" id="form3Example1c" class="form-control" />
-                        <label class="form-label" for="form3Example1c">Confirm Email</label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="d-flex col flex-row align-items-center mb-2">
-                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                      <div class="form-outline flex-fill mb-0">
-                        <input type="text" name="phone" id="form3Example1c" class="form-control" />
-                        <label class="form-label" for="form3Example1c"> Phone</label><br>
-                        <span class="text-danger ">{{ $errors->first('phone') }}</span>
-                      </div>
-                    </div>
-                    <div class="d-flex col flex-row align-items-center mb-2">
-
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="d-flex col flex-row align-items-center mb-2">
-                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                      <div class="form-outline flex-fill mb-0">
-                        <input type="password" id="psw"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="password"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" class="form-control" />
-                        <label class="form-label" for="form3Example4c">Password</label><br>
-                        <span class="text-danger ">{{ $errors->first('password') }}</span>
-                      </div>
-                    </div>
-
-                    <div class="d-flex col flex-row align-items-center mb-2">
-                      <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                      <div class="form-outline flex-fill mb-0">
-                        <input type="password" id="conpsw"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  name="conpassword"   class="form-control" />
-                        <label class="form-label" for="form3Example4cd">Repeat your password</label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- <div class="form-check d-flex justify-content-center mb-5">
-                    <input class="form-check-input me-2" type="checkbox"  value="" id="form2Example3c" />
-                    <label class="form-check-label" for="form2Example3">
-                      I agree all statements in <a href="#!">Terms of service</a>
-                    </label>
-                  </div> -->
-                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="submit" class="btn btn-primary btn-lg">Join Humainvestor</button>
-                  </div>
-                </form>
+<body>
+  <div class="sign-up">
+    <div class="row">
+      <div class="col-md-6 right-bg d-none d-md-block padd-zero signup-desc-outer">
+        <div class="signup-desc">
+          <h1 class="title">Humainvestor</h1>
+          <p class="desc">with Humainvestor, reveal your potential </br>
+            or money make money trough other.</p>
+        </div>
+      </div>
+      <div class="col-md-6 padd-zero">
+        <div class="signup-form">
+          <div class="heading-title">
+            <h1>Humainvestor</h1>
+            <h2>Create an account</h2>
+            <form method="post" action="{{url('/postsignup')}}">
+              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label class="d-flex justify-content-start m-0">First Name*</label>
+                  <input type="text" value="{{ old('firstname')}}" class="form-control" name="firstname" id="firstname" placeholder="First Name">
+                  <span class="text-danger d-flex justify-content-start">{{ $errors->first('firstname') }}</span>
+                </div>
+                <div class="col-md-6">
+                  <label class="d-flex justify-content-start m-0">Last Name*</label>
+                  <input type="text" value="{{ old('lastname')}}" class="form-control" name="lastname" id="lastname" placeholder="Last Name">
+                  <span class="text-danger d-flex justify-content-start ">{{ $errors->first('lastname') }}</span>
+                </div>
               </div>
-              <div class="col-md-10 col-lg-6 col-xl-6 d-flex align-items-center order-1 order-lg-2">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp" class="img-fluid" alt="Sample image">
+              <div class="mb-3 row">
+                <div class="col-12">
+                  <label class="d-flex justify-content-start m-0">Nick Name</label>
+                  <input type="text" class="form-control" name="nickname" id="nickname" placeholder="Nickname">
+                </div>
               </div>
-            </div>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label class="d-flex justify-content-start m-0">Email*</label>
+                  <input type="email" value="{{ old('email') }}" onchange="myFunction()" class="form-control" name="email" id="Email" placeholder="Email address">
+                  <p class="text-danger" id="invalidemail" style="display:none;color:red;font-size: 14px;">Please enter a valid email address!</p>
+                  <span class="text-danger d-flex justify-content-start">{{ $errors->first('email') }}</span>
+                </div>
+                <div class="col-md-6">
+                  <label class="d-flex justify-content-start m-0">Confirm Email*</label>
+                  <input type="email" value="{{ old('email') }}" onchange="confirmEmail()" class="form-control" name="conemail" id="conEmail" placeholder="Confirm Email address">
+                  <p class="text-danger" id="notmatchemail" style="display:none;color:red;font-size: 14px;">Email does not match!</p>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label class="d-flex justify-content-start m-0">Phone*</label>
+                  <input type="text" value="{{ old('phone')}}" name="phone" class="form-control" id="phone" placeholder="phone Number">
+
+                  <span class="text-danger d-flex justify-content-start">{{ $errors->first('phone') }}</span>
+                </div>
+                <div class="col-md-6">
+                  <label class="d-flex justify-content-start m-0">DOB</label>
+                  <input type="date" class="form-control" id="dob" name="dob">
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label class="d-flex justify-content-start m-0">Password*</label>
+                  <input type="password" onchange="passwordvalid()"   name="password" class="form-control" id="Password" placeholder="Password">
+                  <p class="text-danger" id="passwordvalidate" style="display:none;text-align: initial;color:red;font-size: 14px;">
+                    password must be a minimum of 8 characters including number, Upper, Lower And one special character
+                  </p>
+
+                  <span class="text-danger d-flex justify-content-start">{{ $errors->first('password') }}</span>
+                </div>
+                <div class="col-md-6">
+                  <label class="d-flex justify-content-start m-0"> Confirm Password*</label>
+                  <input type="password" onchange="confirmPassword()" class="form-control" id="conpassword" placeholder="Confirm Password">
+                  <p class="text-danger" id="confirmpasswordvalidate" style="display:none;color:red;font-size: 14px;">Password does not match!</p>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Join Humainvestor</button>
+            </form>
+          </div>
+          <div class="rigister-div d-flex justify-content-center mt-1">
+            Already have an account?
+            <a class="" href="/login">
+              <p class="rigister">Login</p>
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+<script type="text/javascript">
+
+  function myFunction(val) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById('Email').value)) {
+      document.getElementById("invalidemail").style.display = "none";
+    } else {
+      document.getElementById("invalidemail").style.display = "flex";
+    }
+  }
+
+  function confirmEmail() {
+    if (document.getElementById('Email').value != document.getElementById('conEmail').value) {
+      document.getElementById("notmatchemail").style.display = "flex";
+    } else {
+      document.getElementById("notmatchemail").style.display = "none";
+    }
+  }
+
+  function passwordvalid(){
+    var regix = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+    if (regix.test(document.getElementById('Password').value) == false) {
+      document.getElementById("passwordvalidate").style.display = "flex";
+    } else {
+      document.getElementById("passwordvalidate").style.display = "none";
+    }
+  }
+  
+  function confirmPassword() {
+    if (document.getElementById('Password').value != document.getElementById('conpassword').value) {
+      document.getElementById("confirmpasswordvalidate").style.display = "flex";
+    } else {
+      document.getElementById("confirmpasswordvalidate").style.display = "none";
+    }
+  }
+</script>

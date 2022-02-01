@@ -1,63 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+     
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/login.css" />
+    <link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" />
 
-
-<html class="">
-<title>login</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|PT+Sans|Roboto|Roboto+Slab|Titillium+Web" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</head>
-<section class="vh-100" style="background-color: #eee;">
-  <div class="container h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-lg-12 col-xl-11">
-        <div class="card text-black" style="border-radius: 25px;">
-          <div class="card-body p-md-5">
-            <div class="row justify-content-center">
-              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-2">Login</p>
-
-                <form class="mx-1 mx-md-6"  method="POST" action="{{url('/postLogin')}}">
-                  @csrf
-                  <div class="row">
-                    <div class="d-flex  flex-row align-items-center mb-2">
-                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                      <div class="form-outline flex-fill mb-0">
-                        <input type="email" name="email" id="form3Example1c" class="form-control" />
-                        <label class="form-label" for="form3Example1c"> Email</label>
-                      </div>
-                    </div>
-                    <div class="d-flex  flex-row align-items-center mb-2">
-                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                      <div class="form-outline flex-fill mb-0">
-                        <input type="password" name="password" id="form3Example1c" class="form-control" />
-                        <label class="form-label" for="form3Example1c">Password</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="submit" class="btn btn-primary btn-lg">login</button>
-                    
-                  </div>
-                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                  <p><a href="/signup">Forgot Password?</a></p>
-                  </div>
-                 
-                  <div class="form-check d-flex justify-content-center mb-5">                  
-                    <label class="form-check-label" for="form2Example3">
-                      Don't have an account? <a href="/signup"> Sign Up </a>
-                    </label>
-                  </div>
-                 
-                </form>
-              </div>
-              <div class="col-md-10 col-lg-6 col-xl-6 d-flex align-items-center order-1 order-lg-2">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp" class="img-fluid" alt="Sample image">
-              </div>
+    <title>Humainvestor</title>
+  </head>
+  <body>
+    <div class="login">
+      <div class="row">
+        <div class="col-md-6 right-bg d-none d-md-block padd-zero login-desc-outer">
+          <div class="login-desc">
+            <h1 class="title">Humainvestor</h1>
+            <p class="desc">with Humainvestor, reveal your potential </br>
+              or money make money trough other.</p>
+          </div>
+        </div>
+        <div class="col-md-6 padd-zero">
+          <div class="signup-form">
+            <div class="heading-title">
+            <h1>Humainvestor</h1>
+            <h2>Join Humainvestor</h2>
+          </div>
+          <span class="text-danger ">{{ $errors->first('approve')}}</span>
+          <form method="POST" action="{{url('/postLogin')}}">
+          @csrf
+            <div class="mb-3">
+              <label for="Email" class="form-label">Email</label>
+              <input type="email" onchange="myFunction()" value="{{ old('email') }}" name="email" class="form-control" id="Email" placeholder="Email">
+              <p id="invalidemail"style="display:none;color:red;font-size: 14px;">Please enter a valid email address!</p>
+              <span class="text-danger ">{{ $errors->first('email') }}</span>
             </div>
+            <div class="mb-3">
+              <label for="Motdepasse" class="form-label">Password</label>
+              <input type="password" name="password" class="form-control" id="Motdepasse" placeholder="Enter Password">
+              <span class="text-danger ">{{ $errors->first('password') }}</span>
+            </div>
+            <button type="submit" class="btn btn-primary">login</button>
+            <div class="forgot-pass-div">
+              <a href="forgetpassword">
+                <p class="forgot-pass">Forget Password?</p>
+              </a>
+            </div>
+            <div class="rigister-div">
+              <a href="signup">
+                <p class="rigister">don't have a account? Sign in </p>
+              </a>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <div class="row">
+          <div class="col-12">
+            <p class="desc">Humainvestor, is the first ssocial network that allows all IT user
+              to earn money, wheather you are acelebrity , a content creator, or a normal user
+            </p>
+            <button type="button" class="btn btn-primary">About Humainvestor</button>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+<script type="text/javascript">
+function myFunction(val) {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById('Email').value))
+  {
+    console.log(document.getElementById('Email').value)
+    document.getElementById("invalidemail").style.display="none";
+  }else{
+    document.getElementById("invalidemail").style.display="block";
+  }
+}
+ </script> 

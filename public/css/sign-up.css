@@ -1,0 +1,169 @@
+html,
+body {
+
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif !important;
+}
+.right-bg {
+  /* background-color: #f3c5c5; */
+  height: 99vh;
+}
+/* .login-image {
+  background-image: url("../Images/signup/original.jpg");
+  width: 100%;
+  position: absolute;
+  right: 0px;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+ 
+} */
+.sign-up .row{
+  margin: 0;
+}
+.sign-up .padd-zero{
+  padding: 0;
+}
+.sign-up .signup-form {
+  max-width: 80%;
+  margin: 30px auto 0;
+}
+.sign-up .signup-form .heading-title {
+  text-align: center;
+}
+.sign-up .signup-form .heading-title h1 {
+  font-size: 42px;
+  font-weight: bold;
+  color: #9f0029;
+  margin-bottom: 27px;
+}
+.sign-up .signup-form .heading-title h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.sign-up .signup-form .form-label {
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  color: #1E1F1F;
+  font-weight: 500;
+}
+.sign-up .signup-form .form-control {
+  padding: 0.495rem 0.75rem;
+  color: #424242;
+  font-weight: 500;
+  font-size: 14px;
+  
+}
+.sign-up .signup-form .btn-primary {
+  color: #fff;
+  width: 100%;
+  text-transform: uppercase;
+  margin-top: 18px;
+  padding: 0.495rem 0.75rem;
+}
+.sign-up .signup-form ::placeholder {
+  color: #9E9E9E;
+  font-weight: 400;
+}
+.sign-up .signup-form .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.sign-up .signup-form .btn-check:focus+.btn-primary, .sign-up .signup-form .btn-primary:focus ,.sign-up .signup-form .btn-primary:hover{
+  color: #fff;
+  box-shadow: none;
+}
+.signup-image {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  border-image: none;
+  border-image: initial;
+  margin: 0;
+  height: 100vh;
+}
+.signup-image span {
+  width: 100%;
+}
+.signup-image span .imageDiv {
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+}
+.signup-image .imageDiv img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sign-up .signup-desc-outer {
+  background: aliceblue;
+}
+.sign-up .signup-desc {
+  text-align: center;
+  height: 550px;
+  padding-top: 200px;
+  width: 100%;
+  text-transform: uppercase;
+}
+.sign-up .signup-form .dob {
+  display: flex;
+}
+.sign-up .signup-form .dob .form-label {
+    min-width: 120px;
+    padding-top: 10px;
+}
+.sign-up .signup-form .form-control {
+  margin-right: 10px;
+}
+
+.rigister-div .rigister{
+  color: #D73951;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .sign-up .signup-form {
+    max-width: 100%;
+    margin: 50px auto 0;
+    padding: 0px 30px;
+  }
+  .sign-up .signup-form .heading-title h1 {  
+    margin-bottom: 30px;
+}
+.sign-up .signup-form .heading-title h1 {
+  font-size: 34px;
+}
+.sign-up .signup-form .heading-title h2 {
+  font-size: 20px;
+
+}
+}
+
+span{
+  font-size: 14px;
+}
+label{margin-left: 20px;}
+#datepicker{width:180px; margin: 0 20px 20px 20px;}
+#datepicker > span:hover{cursor: pointer;}

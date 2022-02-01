@@ -1,0 +1,352 @@
+html,
+body {
+
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif !important;
+}
+.right-bg {
+  /* background-color: #f3c5c5; */
+  height: 99vh;
+}
+.homepage .form-control:focus {
+  box-shadow: none;
+}
+
+header {
+  background: #fff;
+  padding: 20px 0px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+}
+.homepage {
+  background: #f0f2f5;
+}
+.login .row{
+  margin: 0;
+}
+.login .padd-zero{
+  padding: 0;
+}
+
+/* header css start */
+
+.homepage .logo {
+  text-align: center;
+  text-transform: uppercase;
+  color: #1b74e4;
+}
+.homepage .logo h1 {
+  font-size: 30px;
+}
+.homepage .bar .links {
+  display: flex;
+}
+.homepage .faOuter {
+  background: #f0f2f5;
+  border-radius: 50px;
+  padding-top: 5px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.homepage .faOuter .stockIndicator {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+}
+.homepage .bar .links .fa {
+  font-size: 25px;
+}
+.homepage .bar .search {
+  min-width: 350px;
+}
+.homepage .bar .search input {
+  background: #f0f2f5;
+  border-radius: 20px;
+  color: gray;
+}
+.homepage .bar .third {
+  display: flex;
+}
+.homepage .bar .third input {
+  width: 150px;
+  background: #f0f2f5;
+  color: gray;
+  height: 40px;
+}
+.homepage .bar .third .fa.fa-long-arrow-alt-up {
+  font-size: 20px;
+  padding-top: 5px;
+}
+.homepage .bar .third .user .userImg {
+  margin-top: 5px;
+}
+
+@media (max-width: 991px) {
+  .homepage .bar .search {
+    min-width: auto;
+  }
+}
+
+/* header css end */
+
+
+.homepage .main {
+  /* border-top: 1px solid lightgray; */
+}
+.homepage .main .inner .bor1 {
+  padding-top: 20px;
+}
+.homepage .main .inner .bor2 {
+  padding-top: 45px;
+}
+.homepage .main .inner .bor3 {
+  /* border-left: 1px solid lightgray; */
+  padding-top: 20px;
+}
+.homepage .main .inner .cardTitle {
+  text-transform: capitalize;
+  margin: 0;
+  font-weight: bold;
+  color: #1b74e4;
+}
+.homepage .main .inner .card {
+  box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+  margin: 0px 0 20px 0;
+  padding: 10px 10px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+  border-radius: 10px;
+}
+.homepage .main .inner .card .label {
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+.homepage .main .inner .card ul {
+  padding-inline-start: 0px;
+  list-style-type: none;
+}
+.homepage .main .inner .card ul li {
+  font-weight: 500;
+  text-transform: capitalize;
+  color: gray;
+}
+.homepage .main .inner .card ul li .name {
+  font-weight: 600;
+}
+.homepage .main .inner .card ul li .activity {
+  font-size: 12px;
+  text-align: right;
+  float: right;
+  padding-top: 2px;
+  text-decoration: underline;
+}
+.homepage .main .inner .card ul li .trade {
+  font-weight: 600;
+  font-size: 12px;
+}
+.homepage .main .inner .card ul li .trade.buy {
+  color: green;
+}
+.homepage .main .inner .card ul li .trade.sell {
+  color: red;
+}
+.homepage .main .inner .card ul li .volume {
+  float: right;
+  font-size: 12px;
+}
+
+
+
+.homepage .main .inner .bor2 .card {
+  padding: 10px 10px;
+}
+.homepage .main .bor2 .card .data .first {
+  display: flex;
+  padding: 10px 0;
+}
+.homepage .main .bor2 .card .data .first .user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  margin: 0;
+  margin-right: 10px;
+}
+.homepage .main .bor2 .card .data .first input {
+  height: 30px;
+  padding: 10px;
+  font-size: 13px;
+  margin-top: 5px;
+  background: #f0f2f5;
+  border: none;
+  border-radius: 50px;
+}
+.homepage .main .bor2 .card .data .second input {
+  width: 100%;
+  margin-left: 20px;
+}
+.homepage .main .bor2 .card .data .first .label.name {
+  font-weight: bold;
+}
+
+
+.homepage .main .bor2 .card .data .second {
+  text-transform: uppercase;
+  display: flex;
+}
+.homepage .main .bor2 .card .data .second .text {
+  border-color: lightgray;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  height: 80px;
+  font-size: 14px;
+}
+.homepage .main .bor2 .card .data .second p {
+  margin: 0;
+  padding-top: 10px;
+  font-size: 15px;
+}
+.homepage .main .bor2 .card .data .second .photoOuter {
+  display: inline-flex;
+  background: transparent;
+  height: 40px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 1px solid #f0f2f5;
+}
+.homepage .main .bor2 .card .data .second .photoOuter:hover {
+    background: #f0f2f5;
+}
+.homepage .main .bor2 .card .data .second .photoOuter .fa {
+  font-size: 25px;
+}
+.homepage .main .bor2 .card .data .second .photoOuter label {
+  font-size: 10px;
+  padding-top: 3px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.homepage .main .bor2 .card .data .second .videoOuter {
+  display: inline-flex;
+  background: transparent;
+  height: 40px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 1px solid #f0f2f5;
+}
+.homepage .main .bor2 .card .data .second .videoOuter:hover {
+  background: #f0f2f5;
+}
+.homepage .main .bor2 .card .data .second .videoOuter .fa {
+  font-size: 25px;
+}
+.homepage .main .bor2 .card .data .second .videoOuter label {
+  font-size: 10px;
+  padding-top: 3px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.homepage .main .bor2 .card .data .second .podcastOuter {
+  display: inline-flex;
+  background: transparent;
+  height: 40px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 1px solid #f0f2f5;
+}
+.homepage .main .bor2 .card .data .second .podcastOuter:hover {
+  background: #f0f2f5;
+}
+.homepage .main .bor2 .card .data .second .podcastOuter .fa {
+  font-size: 25px;
+}
+.homepage .main .bor2 .card .data .second .podcastOuter label {
+  font-size: 10px;
+  padding-top: 3px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.homepage .main .bor2 .card .data .second .btnOuter {
+  /* padding-left: 150px; */
+}
+.homepage .main .bor2 .card .data .second .btnOuter .btn.btn-primary {
+  border-radius: 100px;
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.homepage .main .bor2 .card .data .second .fa {
+  font-size: 20px !important;
+  /* padding-top: 5px; */
+}
+.homepage .main .bor2 .card .data .first .label {
+  padding-right: 10px;
+  padding-top: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .homepage .main .inner .bor2 {
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .login .signup-form {
+    max-width: 100%;
+    margin: 50px auto 0;
+    padding: 0px 30px;
+  }
+  .login .signup-form .heading-title h1 {  
+    margin-bottom: 30px;
+  }
+  .login .signup-form .heading-title h1 {
+    font-size: 34px;
+  }
+  .login.signup-form .heading-title h2 {
+    font-size: 20px;
+  }
+
+
+  .homepage .main .bor2 .card .data .second {
+    display: block;
+    text-align: center;
+  }
+  .homepage .main .bor2 .card .data .second .photoOuter {
+    padding: 10px 10px;
+    margin-right: 2px;
+  }
+  .homepage .main .bor2 .card .data .second .videoOuter {
+    padding: 10px 10px;
+    margin-right: 2px;
+  }
+  .homepage .main .bor2 .card .data .second .podcastOuter {
+    padding: 10px 10px;
+    margin-right: 2px;
+  }
+  .homepage .main .bor2 .card .data .second .btnOuter .btn.btn-primary {
+    width: 100%;
+  }
+
+
+}
